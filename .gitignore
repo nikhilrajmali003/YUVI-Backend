@@ -1,38 +1,32 @@
-
- target/
- .mvn/wrapper/maven-wrapper.jar
-Common/
-Deploying.../
-Exited/
-HELP.md
-
-### STS ###
+# ===================== Maven =====================
+target/ 
+*.class
+ *.jar
+# ===================== Spring Tool Suite =====================
 .apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
+ .classpath
+ .factorypath
+ .project
+ .settings
+ .springBeans
+ .sts4-cache
+# ===================== IntelliJ IDEA =====================
 .idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
+ *.iws
+ *.iml
+ *.ipr
+# ===================== NetBeans =====================
 /nbproject/private/
-/nbbuild/
+ /nbbuild/ 
 /dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+ /nbdist/
+ /.nb-gradle/
+# ===================== VS Code =====================
 .vscode/
+# ===================== Environment / Secrets =====================
 application-local.properties
-application-secrets.properties
-.env
+ application-secrets.properties
+ .env
+# ===================== OS =====================
+.DS_Store
+ Thumbs.db
