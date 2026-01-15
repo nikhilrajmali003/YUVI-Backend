@@ -1,7 +1,10 @@
-Common HELP.md
+
  target/
  .mvn/wrapper/maven-wrapper.jar
-
+Common/
+Deploying.../
+Exited/
+HELP.md
 
 ### STS ###
 .apt_generated
