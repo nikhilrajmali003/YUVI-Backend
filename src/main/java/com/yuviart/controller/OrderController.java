@@ -1,6 +1,7 @@
 package com.yuviart.controller;
 
 import com.yuviart.model.Order;
+import com.yuviart.model.Order.OrderStatus;
 import com.yuviart.service.OrderService;
 import com.yuviart.service.PaymentService;
 import org.springframework.http.HttpStatus;
@@ -68,5 +69,49 @@ public class OrderController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
+    }
+ // Add these methods to your existing OrderController class:
+
+    // Get orders by status
+    @GetMapping("/status/{status}")
+    public ResponseEntity<List<Order>> getOrdersByStatus(@PathVariable Order.OrderStatus status) {
+        return ResponseEntity.ok(orderService.getOrdersByStatus(status));
+    }
+    
+    // Get pending orders
+    @GetMapping("/pending")
+    public ResponseEntity<List<Order>> getPendingOrders() {
+        return ResponseEntity.ok(orderService.getPendingOrders());
+    }
+    
+    // Get completed orders
+    @GetMapping("/completed")
+    public ResponseEntity<List<Order>> getCompletedOrders() {
+        return ResponseEntity.ok(orderService.getCompletedOrders());
+    }
+    
+    // Get cancelled orders
+    @GetMapping("/cancelled")
+    public ResponseEntity<List<Order>> getCancelledOrders() {
+        return ResponseEntity.ok(orderService.getCancelledOrders());
+    }
+    
+    // Delete order
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
+        orderService.deleteOrder(id);
+        return ResponseEntity.ok().build();
+    }
+    
+    // Cancel order
+    @PutMapping("/{id}/cancel")
+    public ResponseEntity<Order> cancelOrder(@PathVariable Long id) {
+        return ResponseEntity.ok(orderService.cancelOrder(id));
+    }
+    
+    // Get order statistics
+    @GetMapping("/statistics")
+    public ResponseEntity<OrderService.OrderStatistics> getOrderStatistics() {
+        return ResponseEntity.ok(orderService.getOrderStatistics());
     }
 }
