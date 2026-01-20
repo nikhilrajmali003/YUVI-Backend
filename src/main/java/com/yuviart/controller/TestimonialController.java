@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/testimonials")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174", "http://localhost:5175"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174", "http://localhost:5175","https://yuviart.netlify.app","https://*.netlify.app"}, allowCredentials = "true")
 public class TestimonialController {
 
     private final TestimonialRepository testimonialRepository;
