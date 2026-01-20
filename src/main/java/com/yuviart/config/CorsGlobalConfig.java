@@ -14,15 +14,9 @@ public class CorsGlobalConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-        .allowedOriginPatterns(  // ✅ Changed from allowedOrigins to allowedOriginPatterns
-                    "http://localhost:5173",
-                    "http://localhost:5174",
-                    "http://localhost:5175",
-                    "http://localhost:3000",
-                    "https://yuviart.netlify.app"
-                )
-                .allowedOriginPatterns(
-                    "https://*.netlify.app"
+                .allowedOriginPatterns(  // ✅ ONE call with all patterns
+                    "http://localhost:*",        // All localhost ports
+                    "https://*.netlify.app"      // All Netlify URLs
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
                 .allowedHeaders("*")
