@@ -19,7 +19,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/artworks")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:3000"})
 @Validated
 public class ArtworkController {
 
