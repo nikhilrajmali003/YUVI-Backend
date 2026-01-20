@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/testimonials")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174", "http://localhost:5175","https://yuviart.netlify.app","https://*.netlify.app"}, allowCredentials = "true")
+// ❌ REMOVE THIS LINE
 public class TestimonialController {
 
     private final TestimonialRepository testimonialRepository;
@@ -18,13 +18,11 @@ public class TestimonialController {
         this.testimonialRepository = testimonialRepository;
     }
 
-    // ✅ Client: Get only approved testimonials
     @GetMapping
     public ResponseEntity<List<Testimonial>> getApprovedTestimonials() {
         return ResponseEntity.ok(testimonialRepository.findByApprovedTrue());
     }
 
-    // ✅ Client: Submit new testimonial (auto not approved)
     @PostMapping
     public ResponseEntity<Testimonial> createTestimonial(@RequestBody Testimonial testimonial) {
         testimonial.setApproved(false);
@@ -32,13 +30,11 @@ public class TestimonialController {
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
-    // ✅ Admin: Get all testimonials (approved + pending)
     @GetMapping("/all")
     public ResponseEntity<List<Testimonial>> getAllTestimonials() {
         return ResponseEntity.ok(testimonialRepository.findAll());
     }
 
-    // ✅ Admin: Approve testimonial
     @PutMapping("/{id}/approve")
     public ResponseEntity<Testimonial> approveTestimonial(@PathVariable Long id) {
         return testimonialRepository.findById(id)
@@ -50,7 +46,6 @@ public class TestimonialController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // ✅ Admin: Delete testimonial
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTestimonial(@PathVariable Long id) {
         if (testimonialRepository.existsById(id)) {
