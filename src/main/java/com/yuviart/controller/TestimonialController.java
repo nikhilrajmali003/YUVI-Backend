@@ -17,33 +17,33 @@ public class TestimonialController {
         this.testimonialRepository = testimonialRepository;
     }
 
-    // ✅ PUBLIC - Only approved testimonials
+    // ✅ PUBLIC ENDPOINT - Only approved testimonials (for website)
     @GetMapping("/testimonials")
     public ResponseEntity<List<Testimonial>> getApprovedTestimonials() {
         return ResponseEntity.ok(testimonialRepository.findByApprovedTrue());
     }
 
-    // ✅ PUBLIC - Submit new testimonial
+    // ✅ PUBLIC ENDPOINT - Submit new testimonial
     @PostMapping("/testimonials")
     public ResponseEntity<Testimonial> createTestimonial(@RequestBody Testimonial testimonial) {
-        testimonial.setApproved(false);
+        testimonial.setApproved(false); // Default to pending
         Testimonial saved = testimonialRepository.save(testimonial);
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
-    // ✅ ADMIN - Get ALL testimonials
+    // ✅ ADMIN ENDPOINT - Get ALL testimonials (approved + pending)
     @GetMapping("/admin/testimonials")
-    public ResponseEntity<List<Testimonial>> getAllTestimonials() {
+    public ResponseEntity<List<Testimonial>> getAllTestimonialsForAdmin() {
         return ResponseEntity.ok(testimonialRepository.findAll());
     }
 
-    // ✅ ADMIN - Get only pending
+    // ✅ ADMIN ENDPOINT - Get only pending testimonials
     @GetMapping("/admin/testimonials/pending")
     public ResponseEntity<List<Testimonial>> getPendingTestimonials() {
         return ResponseEntity.ok(testimonialRepository.findByApprovedFalse());
     }
 
-    // ✅ ADMIN - Approve testimonial
+    // ✅ ADMIN ENDPOINT - Approve a testimonial
     @PutMapping("/admin/testimonials/{id}/approve")
     public ResponseEntity<Testimonial> approveTestimonial(@PathVariable Long id) {
         return testimonialRepository.findById(id)
@@ -55,7 +55,7 @@ public class TestimonialController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // ✅ ADMIN - Delete testimonial
+    // ✅ ADMIN ENDPOINT - Delete a testimonial
     @DeleteMapping("/admin/testimonials/{id}")
     public ResponseEntity<Void> deleteTestimonial(@PathVariable Long id) {
         if (testimonialRepository.existsById(id)) {
@@ -63,5 +63,23 @@ public class TestimonialController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
+    }
+
+    // ✅ LEGACY ENDPOINT - Keep for backward compatibility
+    @GetMapping("/testimonials/all")
+    public ResponseEntity<List<Testimonial>> getAllTestimonials() {
+        return ResponseEntity.ok(testimonialRepository.findAll());
+    }
+
+    // ✅ LEGACY ENDPOINT - Keep for backward compatibility
+    @PutMapping("/testimonials/{id}/approve")
+    public ResponseEntity<Testimonial> approveTestimonialLegacy(@PathVariable Long id) {
+        return approveTestimonial(id);
+    }
+
+    // ✅ LEGACY ENDPOINT - Keep for backward compatibility
+    @DeleteMapping("/testimonials/{id}")
+    public ResponseEntity<Void> deleteTestimonialLegacy(@PathVariable Long id) {
+        return deleteTestimonial(id);
     }
 }

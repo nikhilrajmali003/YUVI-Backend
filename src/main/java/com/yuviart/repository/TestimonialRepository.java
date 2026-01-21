@@ -7,6 +7,10 @@ import java.util.List;
 
 @Repository
 public interface TestimonialRepository extends JpaRepository<Testimonial, Long> {
-	 List<Testimonial> findByApprovedTrue();   // Approved testimonials
-	   List<Testimonial> findByApprovedFalse();  // Pending testimonials}
+    
+    // Find only approved testimonials
+    List<Testimonial> findByApprovedTrue();
+    
+    // Find only pending (not approved) testimonials
+    List<Testimonial> findByApprovedFalse();
 }
