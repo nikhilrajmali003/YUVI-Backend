@@ -16,9 +16,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+
 @RequestMapping("/api/admin")
-// ❌ DELETE THIS LINE BELOW ❌
-// @CrossOrigin(origins = "*")
+
 @Validated
 public class AdminController {
 

@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/testimonials")
-// ❌ REMOVE THIS LINE
 public class TestimonialController {
 
     private final TestimonialRepository testimonialRepository;
