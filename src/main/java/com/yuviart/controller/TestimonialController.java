@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/testimonials")
+@RequestMapping("/api")
 public class TestimonialController {
 
     private final TestimonialRepository testimonialRepository;
@@ -17,24 +17,34 @@ public class TestimonialController {
         this.testimonialRepository = testimonialRepository;
     }
 
-    @GetMapping
+    // ✅ PUBLIC - Only approved testimonials
+    @GetMapping("/testimonials")
     public ResponseEntity<List<Testimonial>> getApprovedTestimonials() {
         return ResponseEntity.ok(testimonialRepository.findByApprovedTrue());
     }
 
-    @PostMapping
+    // ✅ PUBLIC - Submit new testimonial
+    @PostMapping("/testimonials")
     public ResponseEntity<Testimonial> createTestimonial(@RequestBody Testimonial testimonial) {
         testimonial.setApproved(false);
         Testimonial saved = testimonialRepository.save(testimonial);
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
-    @GetMapping("/all")
+    // ✅ ADMIN - Get ALL testimonials
+    @GetMapping("/admin/testimonials")
     public ResponseEntity<List<Testimonial>> getAllTestimonials() {
         return ResponseEntity.ok(testimonialRepository.findAll());
     }
 
-    @PutMapping("/{id}/approve")
+    // ✅ ADMIN - Get only pending
+    @GetMapping("/admin/testimonials/pending")
+    public ResponseEntity<List<Testimonial>> getPendingTestimonials() {
+        return ResponseEntity.ok(testimonialRepository.findByApprovedFalse());
+    }
+
+    // ✅ ADMIN - Approve testimonial
+    @PutMapping("/admin/testimonials/{id}/approve")
     public ResponseEntity<Testimonial> approveTestimonial(@PathVariable Long id) {
         return testimonialRepository.findById(id)
                 .map(testimonial -> {
@@ -45,13 +55,13 @@ public class TestimonialController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}")
+    // ✅ ADMIN - Delete testimonial
+    @DeleteMapping("/admin/testimonials/{id}")
     public ResponseEntity<Void> deleteTestimonial(@PathVariable Long id) {
         if (testimonialRepository.existsById(id)) {
             testimonialRepository.deleteById(id);
             return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
         }
+        return ResponseEntity.notFound().build();
     }
 }
