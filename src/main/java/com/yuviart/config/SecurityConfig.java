@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
@@ -25,10 +26,15 @@ public class SecurityConfig {
     @Autowired
     private OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
 
+    // ✅ Inject the CORS configuration from CorsGlobalConfig
+    @Autowired
+    private CorsConfigurationSource corsConfigurationSource;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            // ❌ REMOVED: .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+            // ✅ Enable CORS using the injected configuration
+            .cors(cors -> cors.configurationSource(corsConfigurationSource))
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -54,6 +60,4 @@ public class SecurityConfig {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    
-    // ❌ REMOVED: corsConfigurationSource() method
 }

@@ -2,7 +2,6 @@ package com.yuviart.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-// ❌ REMOVE THIS: import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -14,11 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // Map /api/upload/images/** to the uploads folder
         registry.addResourceHandler("/api/upload/images/**")
                 .addResourceLocations("file:" + uploadDir + "/");
     }
-
-    // ❌ NO addCorsMappings method here
-    // CORS is handled in CorsGlobalConfig.java
 }
