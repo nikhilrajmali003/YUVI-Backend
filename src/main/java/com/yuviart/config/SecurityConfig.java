@@ -12,6 +12,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.http.HttpMethod;
 
 @Configuration
 @EnableWebSecurity
@@ -26,23 +27,25 @@ public class SecurityConfig {
     @Autowired
     private OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
 
-    // ✅ Inject the CORS configuration
     @Autowired
     private CorsConfigurationSource corsConfigurationSource;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            // ✅ CRITICAL: Enable CORS
+            // ✅ CRITICAL: Enable CORS first
             .cors(cors -> cors.configurationSource(corsConfigurationSource))
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
+                // ✅ CRITICAL: Allow OPTIONS requests for CORS preflight
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                // Allow auth endpoints
                 .requestMatchers("/api/auth/**", "/oauth2/**", "/login/oauth2/**").permitAll()
+                // Allow admin endpoints (add authentication later)
                 .requestMatchers("/api/admin/**").permitAll()
-                .requestMatchers("/api/artworks/**").permitAll()
-                .requestMatchers("/api/testimonials/**").permitAll()
+                // Allow all other API endpoints
                 .requestMatchers("/api/**").permitAll()
                 .anyRequest().permitAll()
             )
