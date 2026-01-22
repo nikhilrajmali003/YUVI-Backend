@@ -26,14 +26,14 @@ public class SecurityConfig {
     @Autowired
     private OAuth2AuthenticationFailureHandler oAuth2AuthenticationFailureHandler;
 
-    // ✅ Inject the CORS configuration from CorsGlobalConfig
+    // ✅ Inject the CORS configuration
     @Autowired
     private CorsConfigurationSource corsConfigurationSource;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            // ✅ Enable CORS using the injected configuration
+            // ✅ CRITICAL: Enable CORS
             .cors(cors -> cors.configurationSource(corsConfigurationSource))
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session

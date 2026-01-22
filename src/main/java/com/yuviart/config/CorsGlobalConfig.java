@@ -7,6 +7,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 public class CorsGlobalConfig {
@@ -15,8 +16,15 @@ public class CorsGlobalConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         
-        // ✅ Use allowedOriginPatterns instead of allowedOrigins
+        // ✅ Allow your frontend domain
         configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        
+        // ✅ OR use specific origins (more secure)
+        // configuration.setAllowedOrigins(Arrays.asList(
+        //     "https://yuviart.netlify.app",
+        //     "http://localhost:3000",
+        //     "http://localhost:5173"
+        // ));
         
         configuration.setAllowedMethods(Arrays.asList(
             "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"
