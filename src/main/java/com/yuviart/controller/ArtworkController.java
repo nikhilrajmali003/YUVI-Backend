@@ -2,7 +2,7 @@ package com.yuviart.controller;
 
 import com.yuviart.model.Artwork;
 import com.yuviart.service.ArtworkService;
-import com.yuviart.service.FileStorageService;
+import com.yuviart.service.CloudinaryService;
 
 import jakarta.validation.Valid;
 
@@ -19,6 +19,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/artworks")
+@CrossOrigin(origins = "*")
 @Validated
 public class ArtworkController {
 
@@ -26,7 +27,7 @@ public class ArtworkController {
     private ArtworkService artworkService;
 
     @Autowired
-    private FileStorageService fileStorageService;
+    private CloudinaryService cloudinaryService;  // ✅ Use Cloudinary instead
 
     // 🎨 Get all artworks
     @GetMapping
@@ -65,11 +66,12 @@ public class ArtworkController {
         }
     }
 
-    // 🎨 Create artwork (JSON body)
+    // 🎨 Create artwork (JSON body with imageUrl)
     @PostMapping
     public ResponseEntity<?> createArtwork(@Valid @RequestBody Artwork artwork) {
         try {
             System.out.println("🎨 Creating new artwork: " + artwork.getTitle());
+            System.out.println("🖼️ Image URL: " + artwork.getImageUrl());
             
             // Validate required fields
             if (artwork.getTitle() == null || artwork.getTitle().trim().isEmpty()) {
@@ -97,7 +99,7 @@ public class ArtworkController {
         }
     }
 
-    // 🎨 Upload artwork with image (FormData) - Combined endpoint
+    // 🎨 Upload artwork with image (FormData) - Now uses Cloudinary
     @PostMapping("/with-image")
     public ResponseEntity<?> uploadArtworkWithImage(
             @RequestParam("title") String title,
@@ -131,10 +133,15 @@ public class ArtworkController {
                 return ResponseEntity.badRequest().body(error);
             }
             
-            // Store the image file
-            String filename = fileStorageService.storeFile(image);
-            String imageUrl = "/api/upload/images/" + filename;
-            System.out.println("✅ Image stored: " + imageUrl);
+            // ✅ Upload image to Cloudinary instead of local storage
+            if (!cloudinaryService.isValidImage(image)) {
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Invalid image file or file too large (max 10MB)");
+                return ResponseEntity.badRequest().body(error);
+            }
+            
+            String imageUrl = cloudinaryService.uploadImage(image, "artworks");
+            System.out.println("✅ Image uploaded to Cloudinary: " + imageUrl);
             
             // Create artwork object
             Artwork artwork = new Artwork();
@@ -145,7 +152,7 @@ public class ArtworkController {
             artwork.setRating(rating);
             artwork.setStockQuantity(stockQuantity);
             artwork.setAvailable(available);
-            artwork.setImageUrl(imageUrl);
+            artwork.setImageUrl(imageUrl);  // ✅ Full Cloudinary URL
             
             // Save to database
             Artwork savedArtwork = artworkService.createArtwork(artwork);
@@ -163,11 +170,47 @@ public class ArtworkController {
 
     // 🎨 Update artwork
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateArtwork(@PathVariable Long id, @Valid @RequestBody Artwork artwork) {
+    public ResponseEntity<?> updateArtwork(
+            @PathVariable Long id,
+            @RequestParam(value = "title", required = false) String title,
+            @RequestParam(value = "description", required = false) String description,
+            @RequestParam(value = "category", required = false) String category,
+            @RequestParam(value = "price", required = false) Double price,
+            @RequestParam(value = "rating", required = false) Integer rating,
+            @RequestParam(value = "stockQuantity", required = false) Integer stockQuantity,
+            @RequestParam(value = "available", required = false) Boolean available,
+            @RequestParam(value = "image", required = false) MultipartFile image) {
+        
         try {
             System.out.println("✏️ Updating artwork with ID: " + id);
             
-            Artwork updatedArtwork = artworkService.updateArtwork(id, artwork);
+            // Get existing artwork
+            Artwork existingArtwork = artworkService.getArtworkById(id);
+            
+            // Update fields if provided
+            if (title != null) existingArtwork.setTitle(title.trim());
+            if (description != null) existingArtwork.setDescription(description.trim());
+            if (category != null) existingArtwork.setCategory(category);
+            if (price != null) existingArtwork.setPrice(price);
+            if (rating != null) existingArtwork.setRating(rating);
+            if (stockQuantity != null) existingArtwork.setStockQuantity(stockQuantity);
+            if (available != null) existingArtwork.setAvailable(available);
+            
+            // ✅ If new image is provided, upload to Cloudinary and delete old one
+            if (image != null && !image.isEmpty()) {
+                // Delete old image from Cloudinary
+                if (existingArtwork.getImageUrl() != null && 
+                    existingArtwork.getImageUrl().contains("cloudinary.com")) {
+                    cloudinaryService.deleteImage(existingArtwork.getImageUrl());
+                }
+                
+                // Upload new image
+                String newImageUrl = cloudinaryService.uploadImage(image, "artworks");
+                existingArtwork.setImageUrl(newImageUrl);
+                System.out.println("✅ New image uploaded: " + newImageUrl);
+            }
+            
+            Artwork updatedArtwork = artworkService.updateArtwork(id, existingArtwork);
             System.out.println("✅ Artwork updated successfully");
             
             return ResponseEntity.ok(updatedArtwork);
@@ -191,6 +234,17 @@ public class ArtworkController {
         try {
             System.out.println("🗑️ Deleting artwork with ID: " + id);
             
+            // Get artwork to delete its image from Cloudinary
+            Artwork artwork = artworkService.getArtworkById(id);
+            
+            // ✅ Delete image from Cloudinary
+            if (artwork.getImageUrl() != null && 
+                artwork.getImageUrl().contains("cloudinary.com")) {
+                cloudinaryService.deleteImage(artwork.getImageUrl());
+                System.out.println("✅ Image deleted from Cloudinary");
+            }
+            
+            // Delete artwork from database
             artworkService.deleteArtwork(id);
             System.out.println("✅ Artwork deleted successfully");
             
