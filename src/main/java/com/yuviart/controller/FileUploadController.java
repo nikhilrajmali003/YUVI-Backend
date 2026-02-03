@@ -12,7 +12,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/upload")
-@CrossOrigin(origins = "*")
 public class FileUploadController {
 
     @Autowired
@@ -42,6 +41,7 @@ public class FileUploadController {
             Map<String, Object> response = new HashMap<>();
             response.put("success", true);
             response.put("imageUrl", imageUrl);
+            response.put("url", imageUrl); // Add this for compatibility
             response.put("message", "Image uploaded successfully");
             
             return ResponseEntity.ok(response);
@@ -57,31 +57,42 @@ public class FileUploadController {
     }
 
     /**
-     * General image upload
+     * General image upload - accepts both 'file' and 'image' parameter names
      * POST /api/upload/images
      */
     @PostMapping("/images")
     public ResponseEntity<?> uploadImage(
-            @RequestParam("file") MultipartFile file,
+            @RequestParam(value = "file", required = false) MultipartFile file,
+            @RequestParam(value = "image", required = false) MultipartFile image,
             @RequestParam(value = "folder", required = false, defaultValue = "yuviart") String folder) {
         
         try {
-            System.out.println("📤 Uploading: " + file.getOriginalFilename() + " to folder: " + folder);
+            // Accept either 'file' or 'image' parameter
+            MultipartFile uploadFile = (file != null) ? file : image;
             
-            if (!cloudinaryService.isValidImage(file)) {
+            if (uploadFile == null || uploadFile.isEmpty()) {
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "No file provided. Use 'file' or 'image' parameter");
+                return ResponseEntity.badRequest().body(error);
+            }
+            
+            System.out.println("📤 Uploading: " + uploadFile.getOriginalFilename() + " to folder: " + folder);
+            
+            if (!cloudinaryService.isValidImage(uploadFile)) {
                 Map<String, String> error = new HashMap<>();
                 error.put("error", "Invalid image file or file too large (max 10MB)");
                 return ResponseEntity.badRequest().body(error);
             }
 
-            String imageUrl = cloudinaryService.uploadImage(file, folder);
+            String imageUrl = cloudinaryService.uploadImage(uploadFile, folder);
             
             System.out.println("✅ Upload successful: " + imageUrl);
             
             Map<String, Object> response = new HashMap<>();
             response.put("success", true);
-            response.put("imageUrl", imageUrl);
-            response.put("fileName", file.getOriginalFilename());
+            response.put("url", imageUrl); // Frontend expects 'url'
+            response.put("imageUrl", imageUrl); // Keep for backward compatibility
+            response.put("fileName", uploadFile.getOriginalFilename());
             response.put("message", "Image uploaded successfully");
             
             return ResponseEntity.ok(response);
