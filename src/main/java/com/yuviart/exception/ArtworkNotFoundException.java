@@ -1,4 +1,4 @@
-package com.yuvi.exception;
+package com.yuviart.exception;
 
 public class ArtworkNotFoundException extends RuntimeException {
     public ArtworkNotFoundException(String message) {

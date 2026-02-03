@@ -1,0 +1,1434 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.yuviart:YuviArt-portfolio-backend >----------------
+[INFO] Building YuviArt-portfolio-backend 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.9:run (default-cli) > test-compile @ YuviArt-portfolio-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ YuviArt-portfolio-backend ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ YuviArt-portfolio-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ YuviArt-portfolio-backend ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ YuviArt-portfolio-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.9:run (default-cli) < test-compile @ YuviArt-portfolio-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.9:run (default-cli) @ YuviArt-portfolio-backend ---
+[INFO] Attaching agents: []
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.9)
+
+2026-01-29T12:01:41.891+05:30  INFO 11524 --- [yuviart] [           main] com.yuviart.YuviArtApplication           : Starting YuviArtApplication using Java 17.0.17 with PID 11524 (/home/nikhil003/Documents/yuviart/YuviArt/target/classes started by nikhil003 in /home/nikhil003/Documents/yuviart/YuviArt)
+2026-01-29T12:01:41.895+05:30  INFO 11524 --- [yuviart] [           main] com.yuviart.YuviArtApplication           : The following 1 profile is active: "local"
+2026-01-29T12:01:43.267+05:30  INFO 11524 --- [yuviart] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-29T12:01:43.338+05:30  INFO 11524 --- [yuviart] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 6 JPA repository interfaces.
+2026-01-29T12:01:43.920+05:30  INFO 11524 --- [yuviart] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-29T12:01:43.938+05:30  INFO 11524 --- [yuviart] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-29T12:01:43.938+05:30  INFO 11524 --- [yuviart] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-29T12:01:44.006+05:30  INFO 11524 --- [yuviart] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-29T12:01:44.008+05:30  INFO 11524 --- [yuviart] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2022 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-01-29T12:01:44.222+05:30  INFO 11524 --- [yuviart] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29T12:01:44.280+05:30  INFO 11524 --- [yuviart] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-29T12:01:44.317+05:30  INFO 11524 --- [yuviart] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-29T12:01:44.612+05:30  INFO 11524 --- [yuviart] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-29T12:01:44.645+05:30  INFO 11524 --- [yuviart] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-29T12:01:44.841+05:30  INFO 11524 --- [yuviart] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-01-29T12:01:44.844+05:30  INFO 11524 --- [yuviart] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-29T12:01:44.880+05:30  WARN 11524 --- [yuviart] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.3.232 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-01-29T12:01:44.884+05:30  WARN 11524 --- [yuviart] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-29T12:01:44.904+05:30  INFO 11524 --- [yuviart] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-29T12:01:45.912+05:30  INFO 11524 --- [yuviart] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29T12:01:45.926+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    alter table order_items 
+       drop 
+       foreign key FKbioxgbv59vetrxe0ejfubep1w
+Hibernate: 
+    alter table order_items 
+       drop 
+       foreign key FKbioxgbv59vetrxe0ejfubep1w
+2026-01-29T12:01:45.927+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table order_items 
+       drop 
+       foreign key FKbioxgbv59vetrxe0ejfubep1w" via JDBC [Table "ORDER_ITEMS" not found (this database is empty);]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table order_items 
+       drop 
+       foreign key FKbioxgbv59vetrxe0ejfubep1w" via JDBC [Table "ORDER_ITEMS" not found (this database is empty);]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:479) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:245) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:218) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ORDER_ITEMS" not found (this database is empty); SQL statement:
+
+    alter table order_items 
+       drop 
+       foreign key FKbioxgbv59vetrxe0ejfubep1w [42104-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7932) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7926) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.tableIfTableExists(Parser.java:8454) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseAlterTableDrop(Parser.java:8253) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8036) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseAlter(Parser.java:7078) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:629) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.931+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists admins
+Hibernate: 
+    drop table if exists admins
+2026-01-29T12:01:45.932+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists artworks
+Hibernate: 
+    drop table if exists artworks
+2026-01-29T12:01:45.933+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists contact_requests
+Hibernate: 
+    drop table if exists contact_requests
+2026-01-29T12:01:45.933+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists order_items
+Hibernate: 
+    drop table if exists order_items
+2026-01-29T12:01:45.933+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists orders
+Hibernate: 
+    drop table if exists orders
+2026-01-29T12:01:45.934+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists testimonials
+Hibernate: 
+    drop table if exists testimonials
+2026-01-29T12:01:45.934+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    drop table if exists users
+Hibernate: 
+    drop table if exists users
+2026-01-29T12:01:45.939+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table admins (
+        is_active bit,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        last_login datetime(6),
+        updated_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table admins (
+        is_active bit,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        last_login datetime(6),
+        updated_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.943+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table admins (
+        is_active bit,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        last_login datetime(6),
+        updated_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table admins (\000a        is_active bit,\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        last_login datetime(6),\000a        updated_at datetime(6),\000a        email varchar(255) not null,\000a        name varchar(255) not null,\000a        password varchar(255) not null,\000a        role varchar(255) not null,\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table admins (
+        is_active bit,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        last_login datetime(6),
+        updated_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table admins (\000a        is_active bit,\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        last_login datetime(6),\000a        updated_at datetime(6),\000a        email varchar(255) not null,\000a        name varchar(255) not null,\000a        password varchar(255) not null,\000a        role varchar(255) not null,\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table admins (\000a        is_active bit,\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        last_login datetime(6),\000a        updated_at datetime(6),\000a        email varchar(255) not null,\000a        name varchar(255) not null,\000a        password varchar(255) not null,\000a        role varchar(255) not null,\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table admins (
+        is_active bit,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        last_login datetime(6),
+        updated_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        role varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.944+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table artworks (
+        available bit not null,
+        price float(53) not null,
+        rating float(53),
+        stock_quantity integer,
+        id bigint not null auto_increment,
+        category varchar(255) not null,
+        description TEXT,
+        image_url varchar(255),
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table artworks (
+        available bit not null,
+        price float(53) not null,
+        rating float(53),
+        stock_quantity integer,
+        id bigint not null auto_increment,
+        category varchar(255) not null,
+        description TEXT,
+        image_url varchar(255),
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.945+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table artworks (
+        available bit not null,
+        price float(53) not null,
+        rating float(53),
+        stock_quantity integer,
+        id bigint not null auto_increment,
+        category varchar(255) not null,
+        description TEXT,
+        image_url varchar(255),
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table artworks (\000a        available bit not null,\000a        price float(53) not null,\000a        rating float(53),\000a        stock_quantity integer,\000a        id bigint not null auto_increment,\000a        category varchar(255) not null,\000a        description TEXT,\000a        image_url varchar(255),\000a        title varchar(255) not null,\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table artworks (
+        available bit not null,
+        price float(53) not null,
+        rating float(53),
+        stock_quantity integer,
+        id bigint not null auto_increment,
+        category varchar(255) not null,
+        description TEXT,
+        image_url varchar(255),
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table artworks (\000a        available bit not null,\000a        price float(53) not null,\000a        rating float(53),\000a        stock_quantity integer,\000a        id bigint not null auto_increment,\000a        category varchar(255) not null,\000a        description TEXT,\000a        image_url varchar(255),\000a        title varchar(255) not null,\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table artworks (\000a        available bit not null,\000a        price float(53) not null,\000a        rating float(53),\000a        stock_quantity integer,\000a        id bigint not null auto_increment,\000a        category varchar(255) not null,\000a        description TEXT,\000a        image_url varchar(255),\000a        title varchar(255) not null,\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table artworks (
+        available bit not null,
+        price float(53) not null,
+        rating float(53),
+        stock_quantity integer,
+        id bigint not null auto_increment,
+        category varchar(255) not null,
+        description TEXT,
+        image_url varchar(255),
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.948+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table contact_requests (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        message varchar(2000),
+        art_type varchar(255),
+        email varchar(255),
+        name varchar(255),
+        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table contact_requests (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        message varchar(2000),
+        art_type varchar(255),
+        email varchar(255),
+        name varchar(255),
+        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.949+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table contact_requests (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        message varchar(2000),
+        art_type varchar(255),
+        email varchar(255),
+        name varchar(255),
+        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table contact_requests (\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        message varchar(2000),\000a        art_type varchar(255),\000a        email varchar(255),\000a        name varchar(255),\000a        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table contact_requests (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        message varchar(2000),
+        art_type varchar(255),
+        email varchar(255),
+        name varchar(255),
+        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table contact_requests (\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        message varchar(2000),\000a        art_type varchar(255),\000a        email varchar(255),\000a        name varchar(255),\000a        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table contact_requests (\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        message varchar(2000),\000a        art_type varchar(255),\000a        email varchar(255),\000a        name varchar(255),\000a        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table contact_requests (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        message varchar(2000),
+        art_type varchar(255),
+        email varchar(255),
+        name varchar(255),
+        status enum ('CLOSED','IN_PROGRESS','NEW','RESPONDED'),
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.950+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table order_items (
+        price decimal(19,2) not null,
+        quantity integer not null,
+        subtotal decimal(19,2),
+        id bigint not null auto_increment,
+        order_id bigint not null,
+        product_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table order_items (
+        price decimal(19,2) not null,
+        quantity integer not null,
+        subtotal decimal(19,2),
+        id bigint not null auto_increment,
+        order_id bigint not null,
+        product_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.951+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table order_items (
+        price decimal(19,2) not null,
+        quantity integer not null,
+        subtotal decimal(19,2),
+        id bigint not null auto_increment,
+        order_id bigint not null,
+        product_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table order_items (\000a        price decimal(19,2) not null,\000a        quantity integer not null,\000a        subtotal decimal(19,2),\000a        id bigint not null auto_increment,\000a        order_id bigint not null,\000a        product_name varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table order_items (
+        price decimal(19,2) not null,
+        quantity integer not null,
+        subtotal decimal(19,2),
+        id bigint not null auto_increment,
+        order_id bigint not null,
+        product_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table order_items (\000a        price decimal(19,2) not null,\000a        quantity integer not null,\000a        subtotal decimal(19,2),\000a        id bigint not null auto_increment,\000a        order_id bigint not null,\000a        product_name varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table order_items (\000a        price decimal(19,2) not null,\000a        quantity integer not null,\000a        subtotal decimal(19,2),\000a        id bigint not null auto_increment,\000a        order_id bigint not null,\000a        product_name varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table order_items (
+        price decimal(19,2) not null,
+        quantity integer not null,
+        subtotal decimal(19,2),
+        id bigint not null auto_increment,
+        order_id bigint not null,
+        product_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.953+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table orders (
+        total_amount decimal(38,2),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        customer_email varchar(255),
+        customer_name varchar(255),
+        customer_phone varchar(255),
+        payment_id varchar(255),
+        payment_method varchar(255),
+        shipping_address varchar(255),
+        transaction_id varchar(255),
+        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table orders (
+        total_amount decimal(38,2),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        customer_email varchar(255),
+        customer_name varchar(255),
+        customer_phone varchar(255),
+        payment_id varchar(255),
+        payment_method varchar(255),
+        shipping_address varchar(255),
+        transaction_id varchar(255),
+        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.954+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table orders (
+        total_amount decimal(38,2),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        customer_email varchar(255),
+        customer_name varchar(255),
+        customer_phone varchar(255),
+        payment_id varchar(255),
+        payment_method varchar(255),
+        shipping_address varchar(255),
+        transaction_id varchar(255),
+        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table orders (\000a        total_amount decimal(38,2),\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        updated_at datetime(6),\000a        customer_email varchar(255),\000a        customer_name varchar(255),\000a        customer_phone varchar(255),\000a        payment_id varchar(255),\000a        payment_method varchar(255),\000a        shipping_address varchar(255),\000a        transaction_id varchar(255),\000a        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table orders (
+        total_amount decimal(38,2),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        customer_email varchar(255),
+        customer_name varchar(255),
+        customer_phone varchar(255),
+        payment_id varchar(255),
+        payment_method varchar(255),
+        shipping_address varchar(255),
+        transaction_id varchar(255),
+        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table orders (\000a        total_amount decimal(38,2),\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        updated_at datetime(6),\000a        customer_email varchar(255),\000a        customer_name varchar(255),\000a        customer_phone varchar(255),\000a        payment_id varchar(255),\000a        payment_method varchar(255),\000a        shipping_address varchar(255),\000a        transaction_id varchar(255),\000a        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table orders (\000a        total_amount decimal(38,2),\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        updated_at datetime(6),\000a        customer_email varchar(255),\000a        customer_name varchar(255),\000a        customer_phone varchar(255),\000a        payment_id varchar(255),\000a        payment_method varchar(255),\000a        shipping_address varchar(255),\000a        transaction_id varchar(255),\000a        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table orders (
+        total_amount decimal(38,2),
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        customer_email varchar(255),
+        customer_name varchar(255),
+        customer_phone varchar(255),
+        payment_id varchar(255),
+        payment_method varchar(255),
+        shipping_address varchar(255),
+        transaction_id varchar(255),
+        status enum ('CANCELLED','CONFIRMED','DELIVERED','PENDING','PROCESSING','SHIPPED'),
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.955+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table testimonials (
+        approved bit,
+        rating integer,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        text varchar(1000),
+        email varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table testimonials (
+        approved bit,
+        rating integer,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        text varchar(1000),
+        email varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.956+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table testimonials (
+        approved bit,
+        rating integer,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        text varchar(1000),
+        email varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table testimonials (\000a        approved bit,\000a        rating integer,\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        text varchar(1000),\000a        email varchar(255),\000a        name varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table testimonials (
+        approved bit,
+        rating integer,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        text varchar(1000),
+        email varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table testimonials (\000a        approved bit,\000a        rating integer,\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        text varchar(1000),\000a        email varchar(255),\000a        name varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table testimonials (\000a        approved bit,\000a        rating integer,\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        text varchar(1000),\000a        email varchar(255),\000a        name varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table testimonials (
+        approved bit,
+        rating integer,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        text varchar(1000),
+        email varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.957+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    create table users (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255),
+        phone varchar(255),
+        picture varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table users (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255),
+        phone varchar(255),
+        picture varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-01-29T12:01:45.958+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table users (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255),
+        phone varchar(255),
+        picture varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table users (\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        email varchar(255) not null,\000a        name varchar(255) not null,\000a        password varchar(255),\000a        phone varchar(255),\000a        picture varchar(255),\000a        provider varchar(255),\000a        provider_id varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table users (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255),
+        phone varchar(255),
+        picture varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    ) engine=InnoDB" via JDBC [Syntax error in SQL statement "\000a    create table users (\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        email varchar(255) not null,\000a        name varchar(255) not null,\000a        password varchar(255),\000a        phone varchar(255),\000a        picture varchar(255),\000a        provider varchar(255),\000a        provider_id varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:430) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:346) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table users (\000a        created_at datetime(6),\000a        id bigint not null auto_increment,\000a        email varchar(255) not null,\000a        name varchar(255) not null,\000a        password varchar(255),\000a        phone varchar(255),\000a        picture varchar(255),\000a        provider varchar(255),\000a        provider_id varchar(255),\000a        primary key (id)\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table users (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255),
+        phone varchar(255),
+        picture varchar(255),
+        provider varchar(255),
+        provider_id varchar(255),
+        primary key (id)
+    ) engine=InnoDB [42001-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5527) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8827) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseCreate(Parser.java:6398) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.959+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    alter table admins 
+       add constraint UK47bvqemyk6vlm0w7crc3opdd4 unique (email)
+Hibernate: 
+    alter table admins 
+       add constraint UK47bvqemyk6vlm0w7crc3opdd4 unique (email)
+2026-01-29T12:01:45.960+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table admins 
+       add constraint UK47bvqemyk6vlm0w7crc3opdd4 unique (email)" via JDBC [Table "ADMINS" not found;]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table admins 
+       add constraint UK47bvqemyk6vlm0w7crc3opdd4 unique (email)" via JDBC [Table "ADMINS" not found;]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTableConstraints(SchemaCreatorImpl.java:402) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:358) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" not found; SQL statement:
+
+    alter table admins 
+       add constraint UK47bvqemyk6vlm0w7crc3opdd4 unique (e [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:43) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Command.executeUpdate(Command.java:304) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Command.executeUpdate(Command.java:248) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.961+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    alter table users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: 
+    alter table users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
+2026-01-29T12:01:45.961+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)" via JDBC [Table "USERS" not found;]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)" via JDBC [Table "USERS" not found;]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTableConstraints(SchemaCreatorImpl.java:402) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:358) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:241) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+
+    alter table users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (e [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:43) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Command.executeUpdate(Command.java:304) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Command.executeUpdate(Command.java:248) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 39 common frames omitted
+
+2026-01-29T12:01:45.962+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    alter table order_items 
+       add constraint FKbioxgbv59vetrxe0ejfubep1w 
+       foreign key (order_id) 
+       references orders (id)
+Hibernate: 
+    alter table order_items 
+       add constraint FKbioxgbv59vetrxe0ejfubep1w 
+       foreign key (order_id) 
+       references orders (id)
+2026-01-29T12:01:45.963+05:30  WARN 11524 --- [yuviart] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table order_items 
+       add constraint FKbioxgbv59vetrxe0ejfubep1w 
+       foreign key (order_id) 
+       references orders (id)" via JDBC [Table "ORDER_ITEMS" not found;]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table order_items 
+       add constraint FKbioxgbv59vetrxe0ejfubep1w 
+       foreign key (order_id) 
+       references orders (id)" via JDBC [Table "ORDER_ITEMS" not found;]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createForeignKeys(SchemaCreatorImpl.java:307) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:253) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:174) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:973) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ORDER_ITEMS" not found; SQL statement:
+
+    alter table order_items 
+       add constraint FKbioxgbv59vetrxe0ejfubep1w 
+       foreign key (order_id) 
+       references orders [42102-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:43) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Command.executeUpdate(Command.java:304) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Command.executeUpdate(Command.java:248) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 38 common frames omitted
+
+2026-01-29T12:01:45.966+05:30  INFO 11524 --- [yuviart] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T12:01:47.227+05:30  INFO 11524 --- [yuviart] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-29T12:01:47.238+05:30  INFO 11524 --- [yuviart] [           main] com.yuviart.YuviArtApplication           : Started YuviArtApplication in 5.952 seconds (process running for 6.491)
+2026-01-29T12:01:47.368+05:30 DEBUG 11524 --- [yuviart] [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id 
+    from
+        admins a1_0 
+    where
+        a1_0.email=? 
+    limit
+        ?
+Hibernate: 
+    select
+        a1_0.id 
+    from
+        admins a1_0 
+    where
+        a1_0.email=? 
+    limit
+        ?
+2026-01-29T12:01:47.371+05:30  WARN 11524 --- [yuviart] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42104, SQLState: 42S04
+2026-01-29T12:01:47.371+05:30 ERROR 11524 --- [yuviart] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "ADMINS" not found (this database is empty); SQL statement:
+select a1_0.id from admins a1_0 where a1_0.email=? limit ? [42104-232]
+2026-01-29T12:01:47.379+05:30  INFO 11524 --- [yuviart] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-29T12:01:47.393+05:30 ERROR 11524 --- [yuviart] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement [Table "ADMINS" not found (this database is empty); SQL statement:
+select a1_0.id from admins a1_0 where a1_0.email=? limit ? [42104-232]] [select a1_0.id from admins a1_0 where a1_0.email=? limit ?]; SQL [select a1_0.id from admins a1_0 where a1_0.email=? limit ?]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:281) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.15.jar:6.2.15]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.15.jar:6.2.15]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.15.jar:6.2.15]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.15.jar:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar:6.2.15]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136) ~[spring-data-jpa-3.5.7.jar:3.5.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar:6.2.15]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.15.jar:6.2.15]
+	at jdk.proxy2/jdk.proxy2.$Proxy137.existsByEmail(Unknown Source) ~[na:na]
+	at com.yuviart.config.AdminInitializer.lambda$0(AdminInitializer.java:22) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-6.2.15.jar:6.2.15]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.2.15.jar:6.2.15]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-6.2.15.jar:6.2.15]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772) ~[spring-boot-3.5.9.jar:3.5.9]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.yuviart.YuviArtApplication.main(YuviArtApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "ADMINS" not found (this database is empty); SQL statement:
+select a1_0.id from admins a1_0 where a1_0.email=? limit ? [42104-232]] [select a1_0.id from admins a1_0 where a1_0.email=? limit ?]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:191) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:153) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.exec.internal.StandardStatementCreator.createStatement(StandardStatementCreator.java:49) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:236) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:172) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.<init>(JdbcValuesResultSetImpl.java:74) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:355) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$1(ConcreteSqmSelectQueryPlan.java:149) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:439) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:359) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:364) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:120) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:419) ~[spring-orm-6.2.15.jar:6.2.15]
+	at jdk.proxy2/jdk.proxy2.$Proxy152.getResultList(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ExistsExecution.doExecute(JpaQueryExecution.java:336) ~[spring-data-jpa-3.5.7.jar:3.5.7]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:95) ~[spring-data-jpa-3.5.7.jar:3.5.7]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:160) ~[spring-data-jpa-3.5.7.jar:3.5.7]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:148) ~[spring-data-jpa-3.5.7.jar:3.5.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.7.jar:3.5.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.7.jar:3.5.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:170) ~[spring-data-commons-3.5.7.jar:3.5.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.7.jar:3.5.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar:6.2.15]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.7.jar:3.5.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.15.jar:6.2.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.15.jar:6.2.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.15.jar:6.2.15]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.15.jar:6.2.15]
+	... 26 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" not found (this database is empty); SQL statement:
+select a1_0.id from admins a1_0 where a1_0.email=? limit ? [42104-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7932) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7916) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7895) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1769) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.readTableReference(Parser.java:2249) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2702) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseSelect(Parser.java:2810) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2692) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2547) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2526) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2519) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2512) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parseQuery(Parser.java:2479) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parsePrepared(Parser.java:610) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93) ~[h2-2.3.232.jar:2.3.232]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:687) ~[h2-2.3.232.jar:2.3.232]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:342) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$4.doPrepare(StatementPreparerImpl.java:151) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:180) ~[hibernate-core-6.6.39.Final.jar:6.6.39.Final]
+	... 63 common frames omitted
+
+2026-01-29T12:01:47.396+05:30  INFO 11524 --- [yuviart] [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-29T12:01:47.402+05:30  INFO 11524 --- [yuviart] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-29T12:01:47.407+05:30  INFO 11524 --- [yuviart] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T12:01:47.409+05:30  INFO 11524 --- [yuviart] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-29T12:01:47.411+05:30  INFO 11524 --- [yuviart] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.775 s
+[INFO] Finished at: 2026-01-29T12:01:47+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.9:run (default-cli) on project YuviArt-portfolio-backend: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

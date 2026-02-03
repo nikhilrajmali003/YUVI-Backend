@@ -7,6 +7,7 @@ import com.yuviart.model.User;
 import com.yuviart.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.yuviart.config.JwtTokenProvider;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -19,6 +20,9 @@ public class AuthService {
     
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
     
     /**
      * Register new user
@@ -45,7 +49,7 @@ public class AuthService {
             user.getId(), 
             user.getName(), 
             user.getEmail(),
-            "token_placeholder" // TODO: Generate JWT token
+            jwtTokenProvider.generateToken(user.getEmail()) // ✅ Real JWT token
         );
     }
     
@@ -77,7 +81,7 @@ public class AuthService {
             user.getId(), 
             user.getName(), 
             user.getEmail(),
-            "token_placeholder" // TODO: Generate JWT token
+            jwtTokenProvider.generateToken(user.getEmail()) // ✅ Real JWT token
         );
     }
 }

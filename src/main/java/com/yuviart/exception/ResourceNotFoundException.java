@@ -1,4 +1,4 @@
-package com.yuvi.exception;
+package com.yuviart.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

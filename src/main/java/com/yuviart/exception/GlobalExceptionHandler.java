@@ -1,4 +1,4 @@
-package com.yuvi.exception;
+package com.yuviart.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

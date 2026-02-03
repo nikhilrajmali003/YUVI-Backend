@@ -25,6 +25,9 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    @Autowired
+    private com.yuviart.config.JwtTokenProvider jwtTokenProvider;
+
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody AdminLoginRequest request) {
         try {
@@ -36,7 +39,7 @@ public class AdminController {
                 System.out.println("✅ Login successful!");
 
                 Map<String, Object> response = new HashMap<>();
-                response.put("token", java.util.UUID.randomUUID().toString());
+                response.put("token", jwtTokenProvider.generateToken(admin.getEmail()));
                 response.put("admin", admin);
                 response.put("message", "Login successful");
 

@@ -17,7 +17,11 @@ public class CorsGlobalConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         
         // ✅ Allow your frontend domain
-        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        configuration.setAllowedOrigins(Arrays.asList(
+            "http://localhost:3000",
+            "http://localhost:5173",
+            "https://yuviart.netlify.app"
+        ));
         
         // ✅ OR use specific origins (more secure)
         // configuration.setAllowedOrigins(Arrays.asList(

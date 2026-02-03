@@ -1,5 +1,6 @@
 package com.yuviart.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
@@ -19,6 +20,9 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     
     @Value("${app.frontend.url}")
     private String frontendUrl;
+
+    @Autowired
+    private com.yuviart.config.JwtTokenProvider jwtTokenProvider;
     
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, 
@@ -27,15 +31,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         
         CustomOAuth2User oauth2User = (CustomOAuth2User) authentication.getPrincipal();
         
-        // Create simple token (in production, use JWT)
-        String userJson = String.format(
-            "{\"id\":%d,\"name\":\"%s\",\"email\":\"%s\",\"picture\":\"%s\"}",
-            oauth2User.getUserId(),
-            oauth2User.getName(),
-            oauth2User.getEmail(),
-            oauth2User.getPicture()
-        );
-        String token = Base64.getEncoder().encodeToString(userJson.getBytes());
+        String token = jwtTokenProvider.generateToken(oauth2User.getEmail());
         
         // Redirect to frontend with token and user info
         String redirectUrl = UriComponentsBuilder.fromUriString(frontendUrl + "/auth/success")

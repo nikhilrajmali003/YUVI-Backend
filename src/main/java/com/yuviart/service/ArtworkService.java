@@ -1,6 +1,6 @@
 package com.yuviart.service;
 
-import com.yuvi.exception.ResourceNotFoundException;
+import com.yuviart.exception.ResourceNotFoundException;
 import com.yuviart.model.Artwork;
 import com.yuviart.repository.ArtworkRepository;
 import org.springframework.stereotype.Service;
